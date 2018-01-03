@@ -1,0 +1,127 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+
+  <!--  [*]  set html page title   -->
+  <title>State Library Statistical Analysis, 2006-07</title>
+
+  <!--  css style sheet -->
+  <style type="text/css">
+      img { border: 0; }
+      .menuimg{
+		height:32px;
+  		width:32px;
+  		position:relative;
+  		top:0px;
+  		border:0px;
+	  }
+	table.title{
+	  font-family: "Georgia";
+	  font-size: 25px;
+	  color: #ffffff;	
+	}
+	table.pretty {
+	  font-family: "Georgia";
+	  border-collapse: separate;
+	  border-spacing: 0.2em;
+	}
+	table.pretty th, table.pretty td {
+	  font-family: "Georgia";
+	  color:#009999;
+	  background: black;
+	  border: 1px #009999 solid;
+	  padding: 0.2em;	  
+	}
+   </style>
+
+ <!--import jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  <script type="text/javascript">
+    google.charts.load('current', {packages: ['map']});
+    google.charts.setOnLoadCallback(drawMap);
+
+    function drawMap () {
+      
+      var data = new google.visualization.DataTable();
+      data.addColumn('string', 'Address');
+      data.addColumn('string', 'County');
+      
+	
+      data.addRows([
+        ['6880 Capitol Blvd SE, Tumwater, WA 98501, United States', 'Washington State Library'],
+        ['701 N 4th St, Baton Rouge, LA 70802, United States', 'State Library of Louisiana'],
+        ['900 W Capitol Ave #100, Little Rock, AR 72201, United States',    'Arkansas State Library'],
+        ['Kansas KS, United States',  'Kansas State Library'],
+        ['100 N Stewart St, Carson City, NV 89701, United States',    'Nevada State Library and Archives'],
+        ['200 NE 18th St, Oklahoma City, OK 73105, United States',       'Oklahoma Department of Libraries'],
+        ['1209 Camino Carlos Rey, Santa Fe, NM 87507, United States',     'New Mexico State Library'],
+        ['900 N St, Sacramento, CA 95814, United States',        'California State Library'],
+        ['607 South St, Harrisburg, PA 17120, United States',     'Commonwealth Libraries'],
+		['250 N 1950 W, Salt Lake City, UT 84116, United States',     'Utah State Library Division']
+      ]);
+
+      var url = 'http://icons.iconarchive.com/icons/icons-land/vista-map-markers/48/';
+
+      var options = { showTip: true };
+      var map = new google.visualization.Map(document.getElementById('map_div'));
+
+      map.draw(data, options);
+    }
+  </script>
+</head>
+<body bgcolor = "black"> <center>
+
+		
+<table width="990px" class="title">
+	<tr>
+	    <!-- title -->		
+		<td align="center" valign="baseline"><h3>Comparison of different State Libraries in US over Fiscal Year 2006-07</h3></td>
+	</tr>
+</table>
+<table width="990px">
+	<tr>
+	<td><div id="map_div" align= "center" style="height: 500px; width: 1100px"></div><br></td>
+	<td><div align = "right">
+    <a href="Proj2.html">
+  <img src="next.jpg" alt="Next Page" style="width:42px;height:42px;border:0">
+</a>
+</div></td></tr>
+
+<!-- Demo Description -->		
+<table width="990px" class="pretty" font-size:"20px">
+<tr>
+	<td>Description</td>
+	<td>
+		The graph displays comparision between 10 different State Libraries across U.S.A. on the following 7 parameters:<br>
+		1) BookVolume&nbsp;&nbsp;2)TotalStaff&nbsp;&nbsp;3)TotalIncome&nbsp;&nbsp;4)TotalExpense&nbsp;&nbsp;5)Audio Books&nbsp;&nbsp;6)Videos&nbsp;&nbsp;7)TotalHours<br>
+		
+		It helps us to analyse the statistical data for different state libraries over the Fiscal Year 2006-07.
+
+		</td>
+</tr>
+
+<tr>
+	<td>Created By: </td>
+	<td>Duck Dodgers (Ayush Gaur: axg152030 & Abhiyush Mittal: axm159230)
+			</br> 
+	  	</td>
+</tr>
+
+
+<tr>
+	<td>Datasets Used : </td>
+	<td>
+	  <div>
+	  	<a href='http://data-gov.tw.rpi.edu/wiki/Dataset_353'>Dataset 353</a>: <i>State Library Agency Survey: Fiscal Year 2006</i></br>
+	  	<a href='http://data-gov.tw.rpi.edu/wiki/Dataset_354'>Dataset 354</a>: <i>State Library Agency Survey: Fiscal Year 2007</i>
+	  </div>
+	</td>
+</tr>
+</table>
+
+</center>
+  
+</body>
+</html>
